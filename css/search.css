@@ -1,0 +1,166 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-search {
+    color: white;
+    background: url("../images/searchheader.jpg") no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.header-search .navbar-nav>li>a {
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.header-search .navbar {
+    margin-bottom: 0px;
+
+    width: 100%;
+    border-bottom:none;
+    background-color: transparent;
+    min-width: 300px;
+    border: none;
+}
+
+.header-search .navbar-default .navbar-nav>.open>a,
+.header-search .navbar-default .navbar-nav>.open>a:focus,
+.header-search .navbar-default .navbar-nav>.open>a:hover {
+    color: #ccc;
+    background-color: transparent;
+}
+
+.header-search .nav>li>a:focus,
+.header-search .nav>li>a:hover {
+    color: #ccc;
+    background-color: transparent;
+}
+
+.header-search .navbar-nav>li {
+    margin-right: 20px;
+}
+
+.header-search .navbar-nav {
+   margin-top: 12px;
+}
+
+.header-search .navbar-toggle {
+    background-color: transparent !important;
+    margin-top: 20px;
+    border: 1px solid #fff;
+}
+
+.header-search .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.header-search .navbar-brand {
+    color: white;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header-search .navbar-brand:hover {
+    color: #ccc;
+}
+
+.header-search .hero {
+    text-align: center;
+ }
+
+.header-search .hero h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+
+.header-search .hero p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 22px;
+    max-width: 660px;
+    margin: 0 auto 20px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.header-search .btn-primary {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fffbfb !important;
+    outline:none;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 24px;
+    padding: 18px 24px;
+    transition:0.2s background-color;
+}
+
+.header-search .btn-primary:hover {
+    background-color:rgba(255,255,255,0.1);
+}
+
+.header-search .btn-primary:active {
+    transform:translateY(1px);
+}
+
+@media screen and (max-width: 767px) {
+
+    .header-search .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .header-search .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
+        color: #ccc;
+    }
+
+    .header-search .navbar-collapse {
+        margin-left: 20px;
+        border-top: none;
+        box-shadow: none;
+    }
+
+    .header-search .hero{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .header-search .hero h1{
+        font-size: 42px;
+    }
+}
+/*links*/
+/* unvisited link */
+a { cursor:pointer; }
+a:link {
+    color: blue;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+/* selected link */
+a:active {
+    color: orange;
+}
+/*Classes to support paginator*/
+.trash { color:rgb(209, 91, 71); }
+.flag { color:rgb(248, 148, 6); }
+.panel-body { padding:0px; }
+.panel-footer .pagination { margin: 0; }
+.panel .glyphicon,.list-group-item .glyphicon { margin-right:5px; }
+.panel-body .radio, .checkbox { display:inline-block;margin:0px; }
+.panel-body input[type=checkbox]:checked + label { text-decoration: line-through;color: rgb(128, 144, 160); }
+.list-group-item:hover, a.list-group-item:focus {text-decoration: none;background-color: rgb(245, 245, 245);}
+.list-group { margin-bottom:0px; }

@@ -1,0 +1,47 @@
+<div class="container">
+	<div class="row text-center">
+		<div class="form-inline">
+			<label class="label-primary">Repository Name : {{repositoryname}}</label>
+			<label class="label-danger">Outstanding issues : {{issues}}</label>
+			<button type="button" ng-click="returntosearch()" class="btn btn-primary btn-sm">Back to Search</button>
+		</div>
+	</div>
+
+	<div class="row col-sm-8 col-sm-offset-2">			
+		<table class="table table-striped">
+		<thead>
+        <tr>
+          <th>Name</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="contributor in pager.items | orderBy: login">
+          <td>{{contributor.login}}</td>
+          <td><image ng-src="{{contributor.avatar_url}}" ng-style="{ 'width' : '100px' }" title="{{contributor.login}}" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  	<div class="row text-center">
+	    <ul ng-if="pager.pages.length" class="pagination">
+            <li ng-class="{disabled:pager.currentPage === 1}">
+                <a ng-click="setPage(1)">First</a>
+            </li>
+            <li ng-class="{disabled:pager.currentPage === 1}">
+                <a ng-click="setPage(pager.currentPage - 1)">Previous</a>
+            </li>
+            <li ng-repeat="page in pager.pages" ng-class="{active:pager.currentPage === page}">
+                <a ng-click="setPage(page)">{{page}}</a>
+            </li>               
+            <li ng-class="{disabled:pager.currentPage === pager.totalPages}">
+                <a ng-click="setPage(pager.currentPage + 1)">Next</a>
+            </li>
+            <li ng-class="{disabled:pager.currentPage === pager.totalPages}">
+                <a ng-click="setPage(pager.totalPages)">Last</a>
+            </li>
+        </ul>
+	</div>
+
+</div>
+  

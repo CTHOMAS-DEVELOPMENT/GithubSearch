@@ -1,0 +1,28 @@
+    <div class="header-search">
+        <div class="hero">
+            <h1>Search Github</h1>
+			<ul class="list-inline" ng-repeat="development in developments">
+				<li class="list-inline-item"><a href="#!/user/{{development}}">{{development}}</a></li>
+			</ul>
+        </div>
+    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12" align="center">
+				<form ng-submit="search(username)" class="form-inline">
+				<input ng-model="username" required placeholder="Enter Search" class="form-control" auto-focus/>
+				<div class="form-group">
+					<select class="form-control mr-sm-2 mb-2 mb-sm-0" ng-model="username" >
+						<option ng-repeat="development in developments">{{development}}</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-primary">{{"Search with "+username}}</button>
+				<button ng-hide="newSearches" type="button" ng-click="deleteSearches()" class="btn btn-danger">Delete Search History</button>
+				</form>
+			</div>
+		</div>
+			<div class="row">
+				<div class="col-xs-12" align="center">{{error}}</div>
+			</div>
+		</div>
+
